@@ -87,7 +87,6 @@ def solve(text):
     return p1, p2
 
 if __name__ == "__main__":
-    p = os.path.join(os.path.dirname(__file__), "input.txt")
-    with open(p, "r") as f:
-        text = f.read()
-    p1, p2 = solve(text)
+    with open(os.path.join(os.path.dirname(__file__), 'input.txt'), 'r') as f:
+        input_data = [line.strip() for line in f]
+    p1, p2 = solve(input_data)
